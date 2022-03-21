@@ -6,6 +6,7 @@ namespace atm.Models
     {
         [Column(TypeName = "decimal(18,4)")] public decimal Amount { get; set; }
 
-        public Account Account { get; set; }
+        public int AccountId { get; set; }
+        [ForeignKey("AccountId")] public Account Account { get; set; }
     }
 }

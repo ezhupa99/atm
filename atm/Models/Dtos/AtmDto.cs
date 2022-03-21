@@ -1,8 +1,8 @@
-﻿namespace atm.Models
+﻿namespace atm.Models.ViewModels
 {
-    public class ATM : BaseModel
+    public class AtmDto
     {
-        public int Average { get; set; } = 0;
+        public int Id { get; set; }
         public int Banknote5000 { get; set; } = 0;
         public int Banknote2000 { get; set; } = 0;
         public int Banknote1000 { get; set; } = 0;
