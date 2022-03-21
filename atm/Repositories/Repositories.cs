@@ -47,4 +47,12 @@ namespace atm.Repositories
         {
         }
     }
+
+    public class TransactionRepository : BaseModelModelRepository<Transaction>, ITransactionRepository
+    {
+        public TransactionRepository(ComprogContext context)
+            : base(context)
+        {
+        }
+    }
 }

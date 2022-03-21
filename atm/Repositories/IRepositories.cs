@@ -22,4 +22,8 @@ namespace atm.Repositories
     public interface IUserRepository : IBaseModelRepository<User>
     {
     }
+    
+    public interface ITransactionRepository : IBaseModelRepository<Transaction>
+    {
+    }
 }
