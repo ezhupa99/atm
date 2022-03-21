@@ -19,5 +19,6 @@ namespace atm.Data
         public DbSet<ATM> Atms { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
     }
 }
