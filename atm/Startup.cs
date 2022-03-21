@@ -41,17 +41,23 @@ namespace atm
             services.AddScoped<IATMRepository, ATMRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             #endregion
 
             #region Services
 
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IAtmService, AtmService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAccountHistoryService, AccountHistoryService>();
+            services.AddScoped<ITransactionService, TransactionService>();
 
             #endregion
 
             services.AddDbContext<ComprogContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("EmgenContext")));
+                options.UseSqlServer(Configuration.GetConnectionString("ComprogContext")));
 
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "comprog", Version = "v1"}); });
         }
